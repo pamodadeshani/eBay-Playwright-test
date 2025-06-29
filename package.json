@@ -1,0 +1,23 @@
+{
+  "name": "ebay",
+  "version": "1.0.0",
+  "description": "ebay Smoke Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "allure": "npx allure generate --single-file allure-results --clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.5",
+    "allure-commandline": "^2.25.0",
+    "allure-playwright": "2.10.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "playwright": "^1.36"
+  }
+}
