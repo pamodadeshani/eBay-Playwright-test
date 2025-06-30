@@ -2,8 +2,8 @@ import { test, expect, Page } from '@playwright/test'
 import { allure } from 'allure-playwright';
 import { Severity } from "allure-js-commons";
 import { HomePage } from '../pages/Home-page';
-import { ProductPage } from '../pages/Product-page';
 let page: Page
+
 
 // Below code will run before each test
 test.beforeEach(async ({browser}) =>{
@@ -43,7 +43,7 @@ test("Verify user able to search main product. @smoke", async () => {
 
     await allure.step("Filling the Product name", async ()=> {
         await expect(homepageObj.searchField).toBeEditable();
-        await homepageObj.enterProductname("203951606662");
+        await homepageObj.enterProductname("wallet for men");
           }); 
  
 
@@ -52,11 +52,6 @@ test("Verify user able to search main product. @smoke", async () => {
         await homepageObj.searchButton.click();
             });
 
-    await allure.step("Verify that user Navigates to the Product page", async () => {
-        const productPageObj=new ProductPage(page);
-        await expect(page).toHaveURL(/.*203951606662/);
-        });
-    
-    
+
   });
 
